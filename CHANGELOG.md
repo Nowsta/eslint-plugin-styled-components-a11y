@@ -1,3 +1,23 @@
+## 1.0.0 (Nov 1, 2022)
+
+Initial fork for Nowsta modifications. 
+
+- Updated name of package to be scoped to the `@nowsta` org.
+
+- Replaced `push-n-publish` script with `build-and-publish`.
+
+- Bumped versions for the following packages:
+  - `eslint`
+  - `eslint-plugin-jsx-a11y`
+  - `eslint-config-airbnb`
+  - `eslint-plugin-import`
+  - `eslint-plugin-react`
+  - `eslint-plugin-react-hooks`
+
+- Added `@typescript-eslint/parser` as a dependency.
+
+
+
 ## 0.0.40 (July 29, 2022)
 
 - Re-added support for styled components defined within objects while fixing the
