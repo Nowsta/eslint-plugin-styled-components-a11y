@@ -40,7 +40,7 @@ module.exports = {
   },
   configs: {
     recommended: {
-      plugins: ['styled-components-a11y'],
+      plugins: ['@nowsta/styled-components-a11y'],
       extends: ['eslint-config-airbnb/rules/react-a11y'],
       parserOptions: {
         ecmaFeatures: {
@@ -48,18 +48,18 @@ module.exports = {
         },
       },
       rules: {
-        'styled-components-a11y/accessible-emoji': 'error',
-        'styled-components-a11y/alt-text': 'error',
-        'styled-components-a11y/anchor-has-content': 'error',
-        'styled-components-a11y/anchor-is-valid': 'error',
-        'styled-components-a11y/aria-activedescendant-has-tabindex': 'error',
-        'styled-components-a11y/aria-props': 'error',
-        'styled-components-a11y/aria-proptypes': 'error',
-        'styled-components-a11y/aria-role': 'error',
-        'styled-components-a11y/aria-unsupported-elements': 'error',
-        'styled-components-a11y/autocomplete-valid': 'error',
-        'styled-components-a11y/click-events-have-key-events': 'error',
-        'styled-components-a11y/control-has-associated-label': [
+        '@nowsta/styled-components-a11y/accessible-emoji': 'error',
+        '@nowsta/styled-components-a11y/alt-text': 'error',
+        '@nowsta/styled-components-a11y/anchor-has-content': 'error',
+        '@nowsta/styled-components-a11y/anchor-is-valid': 'error',
+        '@nowsta/styled-components-a11y/aria-activedescendant-has-tabindex': 'error',
+        '@nowsta/styled-components-a11y/aria-props': 'error',
+        '@nowsta/styled-components-a11y/aria-proptypes': 'error',
+        '@nowsta/styled-components-a11y/aria-role': 'error',
+        '@nowsta/styled-components-a11y/aria-unsupported-elements': 'error',
+        '@nowsta/styled-components-a11y/autocomplete-valid': 'error',
+        '@nowsta/styled-components-a11y/click-events-have-key-events': 'error',
+        '@nowsta/styled-components-a11y/control-has-associated-label': [
           'off',
           {
             ignoreElements: ['audio', 'canvas', 'embed', 'input', 'textarea', 'tr', 'video'],
@@ -78,30 +78,30 @@ module.exports = {
             includeRoles: ['alert', 'dialog'],
           },
         ],
-        'styled-components-a11y/heading-has-content': 'error',
-        'styled-components-a11y/html-has-lang': 'error',
-        'styled-components-a11y/iframe-has-title': 'error',
-        'styled-components-a11y/img-redundant-alt': 'error',
-        'styled-components-a11y/interactive-supports-focus': [
+        '@nowsta/styled-components-a11y/heading-has-content': 'error',
+        '@nowsta/styled-components-a11y/html-has-lang': 'error',
+        '@nowsta/styled-components-a11y/iframe-has-title': 'error',
+        '@nowsta/styled-components-a11y/img-redundant-alt': 'error',
+        '@nowsta/styled-components-a11y/interactive-supports-focus': [
           'error',
           {
             tabbable: ['button', 'checkbox', 'link', 'searchbox', 'spinbutton', 'switch', 'textbox'],
           },
         ],
-        'styled-components-a11y/label-has-associated-control': 'error',
-        'styled-components-a11y/label-has-for': 'off',
-        'styled-components-a11y/media-has-caption': 'error',
-        'styled-components-a11y/mouse-events-have-key-events': 'error',
-        'styled-components-a11y/no-access-key': 'error',
-        'styled-components-a11y/no-autofocus': 'error',
-        'styled-components-a11y/no-distracting-elements': 'error',
-        'styled-components-a11y/no-interactive-element-to-noninteractive-role': [
+        '@nowsta/styled-components-a11y/label-has-associated-control': 'error',
+        '@nowsta/styled-components-a11y/label-has-for': 'off',
+        '@nowsta/styled-components-a11y/media-has-caption': 'error',
+        '@nowsta/styled-components-a11y/mouse-events-have-key-events': 'error',
+        '@nowsta/styled-components-a11y/no-access-key': 'error',
+        '@nowsta/styled-components-a11y/no-autofocus': 'error',
+        '@nowsta/styled-components-a11y/no-distracting-elements': 'error',
+        '@nowsta/styled-components-a11y/no-interactive-element-to-noninteractive-role': [
           'error',
           {
             tr: ['none', 'presentation'],
           },
         ],
-        'styled-components-a11y/no-noninteractive-element-interactions': [
+        '@nowsta/styled-components-a11y/no-noninteractive-element-interactions': [
           'error',
           {
             handlers: [
@@ -121,7 +121,7 @@ module.exports = {
             img: ['onError', 'onLoad'],
           },
         ],
-        'styled-components-a11y/no-noninteractive-element-to-interactive-role': [
+        '@nowsta/styled-components-a11y/no-noninteractive-element-to-interactive-role': [
           'error',
           {
             ul: ['listbox', 'menu', 'menubar', 'radiogroup', 'tablist', 'tree', 'treegrid'],
@@ -131,7 +131,7 @@ module.exports = {
             td: ['gridcell'],
           },
         ],
-        'styled-components-a11y/no-noninteractive-tabindex': [
+        '@nowsta/styled-components-a11y/no-noninteractive-tabindex': [
           'error',
           {
             tags: [],
@@ -139,23 +139,23 @@ module.exports = {
             allowExpressionValues: true,
           },
         ],
-        'styled-components-a11y/no-onchange': 'error',
-        'styled-components-a11y/no-redundant-roles': 'error',
-        'styled-components-a11y/no-static-element-interactions': [
+        '@nowsta/styled-components-a11y/no-onchange': 'error',
+        '@nowsta/styled-components-a11y/no-redundant-roles': 'error',
+        '@nowsta/styled-components-a11y/no-static-element-interactions': [
           'error',
           {
             allowExpressionValues: true,
             handlers: ['onClick', 'onMouseDown', 'onMouseUp', 'onKeyPress', 'onKeyDown', 'onKeyUp'],
           },
         ],
-        'styled-components-a11y/role-has-required-aria-props': 'error',
-        'styled-components-a11y/role-supports-aria-props': 'error',
-        'styled-components-a11y/scope': 'error',
-        'styled-components-a11y/tabindex-no-positive': 'error',
+        '@nowsta/styled-components-a11y/role-has-required-aria-props': 'error',
+        '@nowsta/styled-components-a11y/role-supports-aria-props': 'error',
+        '@nowsta/styled-components-a11y/scope': 'error',
+        '@nowsta/styled-components-a11y/tabindex-no-positive': 'error',
       },
     },
     strict: {
-      plugins: ['styled-components-a11y'],
+      plugins: ['@nowsta/styled-components-a11y'],
       extends: ['eslint-config-airbnb/rules/react-a11y'],
       parserOptions: {
         ecmaFeatures: {
@@ -163,18 +163,18 @@ module.exports = {
         },
       },
       rules: {
-        'styled-components-a11y/accessible-emoji': 'error',
-        'styled-components-a11y/alt-text': 'error',
-        'styled-components-a11y/anchor-has-content': 'error',
-        'styled-components-a11y/anchor-is-valid': 'error',
-        'styled-components-a11y/aria-activedescendant-has-tabindex': 'error',
-        'styled-components-a11y/aria-props': 'error',
-        'styled-components-a11y/aria-proptypes': 'error',
-        'styled-components-a11y/aria-role': 'error',
-        'styled-components-a11y/aria-unsupported-elements': 'error',
-        'styled-components-a11y/autocomplete-valid': 'error',
-        'styled-components-a11y/click-events-have-key-events': 'error',
-        'styled-components-a11y/control-has-associated-label': [
+        '@nowsta/styled-components-a11y/accessible-emoji': 'error',
+        '@nowsta/styled-components-a11y/alt-text': 'error',
+        '@nowsta/styled-components-a11y/anchor-has-content': 'error',
+        '@nowsta/styled-components-a11y/anchor-is-valid': 'error',
+        '@nowsta/styled-components-a11y/aria-activedescendant-has-tabindex': 'error',
+        '@nowsta/styled-components-a11y/aria-props': 'error',
+        '@nowsta/styled-components-a11y/aria-proptypes': 'error',
+        '@nowsta/styled-components-a11y/aria-role': 'error',
+        '@nowsta/styled-components-a11y/aria-unsupported-elements': 'error',
+        '@nowsta/styled-components-a11y/autocomplete-valid': 'error',
+        '@nowsta/styled-components-a11y/click-events-have-key-events': 'error',
+        '@nowsta/styled-components-a11y/control-has-associated-label': [
           'off',
           {
             ignoreElements: ['audio', 'canvas', 'embed', 'input', 'textarea', 'tr', 'video'],
@@ -193,11 +193,11 @@ module.exports = {
             includeRoles: ['alert', 'dialog'],
           },
         ],
-        'styled-components-a11y/heading-has-content': 'error',
-        'styled-components-a11y/html-has-lang': 'error',
-        'styled-components-a11y/iframe-has-title': 'error',
-        'styled-components-a11y/img-redundant-alt': 'error',
-        'styled-components-a11y/interactive-supports-focus': [
+        '@nowsta/styled-components-a11y/heading-has-content': 'error',
+        '@nowsta/styled-components-a11y/html-has-lang': 'error',
+        '@nowsta/styled-components-a11y/iframe-has-title': 'error',
+        '@nowsta/styled-components-a11y/img-redundant-alt': 'error',
+        '@nowsta/styled-components-a11y/interactive-supports-focus': [
           'error',
           {
             tabbable: [
@@ -213,15 +213,15 @@ module.exports = {
             ],
           },
         ],
-        'styled-components-a11y/label-has-for': 'error',
-        'styled-components-a11y/label-has-associated-control': 'error',
-        'styled-components-a11y/media-has-caption': 'error',
-        'styled-components-a11y/mouse-events-have-key-events': 'error',
-        'styled-components-a11y/no-access-key': 'error',
-        'styled-components-a11y/no-autofocus': 'error',
-        'styled-components-a11y/no-distracting-elements': 'error',
-        'styled-components-a11y/no-interactive-element-to-noninteractive-role': 'error',
-        'styled-components-a11y/no-noninteractive-element-interactions': [
+        '@nowsta/styled-components-a11y/label-has-for': 'error',
+        '@nowsta/styled-components-a11y/label-has-associated-control': 'error',
+        '@nowsta/styled-components-a11y/media-has-caption': 'error',
+        '@nowsta/styled-components-a11y/mouse-events-have-key-events': 'error',
+        '@nowsta/styled-components-a11y/no-access-key': 'error',
+        '@nowsta/styled-components-a11y/no-autofocus': 'error',
+        '@nowsta/styled-components-a11y/no-distracting-elements': 'error',
+        '@nowsta/styled-components-a11y/no-interactive-element-to-noninteractive-role': 'error',
+        '@nowsta/styled-components-a11y/no-noninteractive-element-interactions': [
           'error',
           {
             body: ['onError', 'onLoad'],
@@ -229,15 +229,15 @@ module.exports = {
             img: ['onError', 'onLoad'],
           },
         ],
-        'styled-components-a11y/no-noninteractive-element-to-interactive-role': 'error',
-        'styled-components-a11y/no-noninteractive-tabindex': 'error',
-        'styled-components-a11y/no-onchange': 'error',
-        'styled-components-a11y/no-redundant-roles': 'error',
-        'styled-components-a11y/no-static-element-interactions': 'error',
-        'styled-components-a11y/role-has-required-aria-props': 'error',
-        'styled-components-a11y/role-supports-aria-props': 'error',
-        'styled-components-a11y/scope': 'error',
-        'styled-components-a11y/tabindex-no-positive': 'error',
+        '@nowsta/styled-components-a11y/no-noninteractive-element-to-interactive-role': 'error',
+        '@nowsta/styled-components-a11y/no-noninteractive-tabindex': 'error',
+        '@nowsta/styled-components-a11y/no-onchange': 'error',
+        '@nowsta/styled-components-a11y/no-redundant-roles': 'error',
+        '@nowsta/styled-components-a11y/no-static-element-interactions': 'error',
+        '@nowsta/styled-components-a11y/role-has-required-aria-props': 'error',
+        '@nowsta/styled-components-a11y/role-supports-aria-props': 'error',
+        '@nowsta/styled-components-a11y/scope': 'error',
+        '@nowsta/styled-components-a11y/tabindex-no-positive': 'error',
       },
     },
   },
