@@ -1,22 +1,34 @@
 ## 1.0.0 (Nov 1, 2022)
 
-Initial fork for Nowsta modifications. 
+Initial fork for Nowsta modifications.
+
+- Updated plugin to be able to lint components that use our Presenter pattern.
+
+  - For any `index.tsx` within `src/components`, the plugin will check for any imports matching `/presenter/`.
+  - If found, the Presenter will be parsed, and its `styled` declarations will be collected.
+  - As the plugin parses the original index file, it will match component tags to the collected styled components, and apply linting rules appropriately.
 
 - Updated name of package to be scoped to the `@nowsta` org.
 
-- Replaced `push-n-publish` script with `build-and-publish`.
+- [dev] Replaced `push-n-publish` script with `build-and-publish`.
 
-- Bumped versions for the following packages:
+- [dev] Bumped versions for the following packages:
+
   - `eslint`
   - `eslint-plugin-jsx-a11y`
   - `eslint-config-airbnb`
   - `eslint-plugin-import`
   - `eslint-plugin-react`
   - `eslint-plugin-react-hooks`
+  - `@babel/parser`
+  - `@babel/cli`
+  - `@babel/core`
+  - `@babel/eslint-parser`
+  - `@babel/generator`
+  - `@babel/plugin-proposal-optional-chaining`
+  - `@babel/preset-env`
 
-- Added `@typescript-eslint/parser` as a dependency.
-
-
+- [dev] Added `@typescript-eslint/parser` as a dependency.
 
 ## 0.0.40 (July 29, 2022)
 

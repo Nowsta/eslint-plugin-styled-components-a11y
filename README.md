@@ -2,14 +2,18 @@
 
 This is a fork of [eslint-plugin-styled-components-a11y from brendanmorrell](https://github.com/brendanmorrell/eslint-plugin-styled-components-a11y), modified to be able to lint styled components imported from Presenter files.
 
+**This plugin is highly specialized for the Nowsta Presenter pattern. If you are importing elements in file from a location that doesn't follow the `{component}.presenter.tsx` naming pattern, they won't be linted in that file.**
+
 ## Usage
 
 Install the package:
+
 ```
 npm i --save-dev @nowsta/eslint-plugin-styled-components-a11y
 ```
 
 Once the package is installed, add it as a plugin in your `.eslintrc.js` (or other ESLint config):
+
 ```
 {
   extends: [
@@ -24,6 +28,7 @@ Once the package is installed, add it as a plugin in your `.eslintrc.js` (or oth
 Like other Nowsta packages, this plugin is hosted in the private Nowsta org, so any repo that wants to install this package will need a token to authenticate with the `@nowsta` scope first. For more detailed instructions, please see the [TempoDS README.](https://github.com/Nowsta/tempoDS#authenticating-with-npm)
 
 For projects that need to install the module as part of a build/deployment pipeline, the repo's .npmrc should contain an auth token for the npm registry, **but the auth token should not be committed to the repo.** Instead, the repo's .npmrc should reference some environment variable or secret that the pipeline has access to. If using GitHub Actions, you can make use of the Nowsta org's NPM_AUTH_TOKEN secret by setting it as an environment variable in the workflow, then referencing that environment variable in the repo's .npmrc:
+
 ```
 //registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}
 #always-auth=true
@@ -32,14 +37,15 @@ For projects that need to install the module as part of a build/deployment pipel
 ## Publishing Changes
 
 To publish changes once you've finished development:
-* bump the version number in `package.json` according to SEMVER
-* add a description of the changes to `CHANGELOG.md`
-* push to version control as needed
-* if using locally (such as to verify changes before publishing):
-  * run `npm run build` to build the project
-  * run `npm pack` to create an installable module
-  * install the package in your local project
-* build the project and push to NPM using `npm run build-and-publish`
+
+- bump the version number in `package.json` according to SEMVER
+- add a description of the changes to `CHANGELOG.md`
+- push to version control as needed
+- if using locally (such as to verify changes before publishing):
+  - run `npm run build` to build the project
+  - run `npm pack` to create an installable module
+  - install the package in your local project
+- build the project and push to NPM using `npm run build-and-publish`
 
 Since this plugin is published to the private Nowsta org, the same authentication guidelines apply as described above.
 

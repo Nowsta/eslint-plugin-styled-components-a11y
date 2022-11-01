@@ -20,7 +20,7 @@ const { inspect } = require('util');
 const { __UNKNOWN_IDENTIFER__ } = require('./constants');
 
 module.exports = (styledComponentsDict, context, name) => ({
-  TaggedTemplateExpression(node) {
+  TaggedTemplateExpression(node, usePresenterPrefix) {
     let scName = node.parent.id && node.parent.id.name;
 
     if (!scName) {
@@ -103,10 +103,14 @@ module.exports = (styledComponentsDict, context, name) => ({
             })),
         );
       }
+
+      if (usePresenterPrefix) scName = `Presenter.${scName}`;
       styledComponentsDict[scName] = { name: scName, attrs, tag };
     }
     // const A = styled.div``
     if (isPlainSTE(node)) {
+      if (usePresenterPrefix) scName = `Presenter.${scName}`;
+
       tag = node.tag.property.name;
       styledComponentsDict[scName] = {
         name: scName,
