@@ -6,6 +6,8 @@ This is a fork of [eslint-plugin-styled-components-a11y from brendanmorrell](htt
 
 ## Usage
 
+**If you are already using the `@nowsta/react` config, you do not need to install this plugin, as it is already included in that config.**
+
 Install the package:
 
 ```
