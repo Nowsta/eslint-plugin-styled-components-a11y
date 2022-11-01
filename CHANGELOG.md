@@ -1,3 +1,7 @@
+## 1.0.1 (Nov, 2022)
+
+- Corrected rule names to have the right `@nowsta` namespace.
+
 ## 1.0.0 (Nov 1, 2022)
 
 Initial fork for Nowsta modifications.
